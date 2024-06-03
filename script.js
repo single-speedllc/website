@@ -12,35 +12,23 @@ let isDeleting = false;
 let textContainer = document.getElementById('text-container');
 
 function typeText() {
-    const speedForward = 100; // typing speed
-    const speedBackward = 50; // deleting speed
-    const pause = 2000; // pause between parts
+    let speed = isDeleting ? 50 : 100;  // Speed of typing or deleting
 
-    if (isDeleting) {
-        currentText = parts[currentPart].substring(0, currentText.length - 1);
-    } else {
+    if (!isDeleting) {
         currentText = parts[currentPart].substring(0, currentText.length + 1);
+        if (currentText === parts[currentPart]) {
+            setTimeout(() => { isDeleting = true; }, 2000); // Pause before deleting
+        }
+    } else {
+        currentText = parts[currentPart].substring(0, currentText.length - 1);
+        if (currentText === '') {
+            isDeleting = false;
+            currentPart = (currentPart + 1) % parts.length; // Move to the next part
+        }
     }
 
     textContainer.innerHTML = staticText + currentText;
-
-    let typingSpeed = isDeleting ? speedBackward : speedForward;
-
-    if (!isDeleting && currentText === parts[currentPart]) {
-        // Full text is displayed
-        typingSpeed = pause;
-        isDeleting = true;
-    } else if (isDeleting && currentText === '') {
-        // Text is fully deleted
-        isDeleting = false;
-        currentPart = (currentPart + 1) % parts.length;
-        if (currentPart === 0) {
-            textContainer.innerHTML = staticText; // Reset to initial state every cycle
-        }
-        typingSpeed = 500; // Delay before starting next part
-    }
-
-    setTimeout(typeText, typingSpeed);
+    setTimeout(typeText, speed);
 }
 
 document.addEventListener("DOMContentLoaded", typeText);
