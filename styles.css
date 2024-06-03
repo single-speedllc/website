@@ -1,6 +1,8 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
 #text-container {
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     border-right: 2px solid black;
     padding: 5px;
     margin: 20px;
@@ -8,7 +10,6 @@
     overflow: hidden;
 }
 
-/* Cursor blink effect */
 @keyframes blink {
     50% {
         border-color: transparent;
