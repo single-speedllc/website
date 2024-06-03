@@ -10,34 +10,41 @@ html, body {
     align-items: center;
     background: transparent;
     overflow: hidden;
+    font-size: 16px; /* Base font size */
 }
 
-#text-container, #static-text {
+#text-container {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 1rem; /* Responsive font size based on root font-size */
     color: #333;
+    border-right: 2px solid black; /* Cursor thickness */
+    padding: 0;
+    margin: 0;
     white-space: nowrap;
     overflow: hidden;
-    display: none; /* Initially hide both containers */
-    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto; /* Auto width to adjust based on content size */
+    max-width: 90vw; /* Prevents overflow on small screens */
 }
 
-/* Hide dynamic text and show static text on small screens */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#text-container {
+    animation: blink 1s step-end infinite;
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
+    html, body {
+        font-size: 14px; /* Smaller base font size for smaller devices */
+    }
     #text-container {
-        display: none;
-    }
-    #static-text {
-        display: block;
-    }
-}
-
-/* Show dynamic text and hide static text on larger screens */
-@media (min-width: 601px) {
-    #text-container {
-        display: block;
-    }
-    #static-text {
-        display: none;
+        font-size: 1.1rem; /* Slightly larger font to maintain readability */
+        max-width: 95vw; /* Increase max width for very small screens */
     }
 }
