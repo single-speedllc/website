@@ -8,31 +8,38 @@ const parts = [
 const staticText = "Helping B2B SaaS startups scale through ";
 let currentPart = 0;
 let currentText = '';
+let charIndex = 0;
 let isDeleting = false;
 let textContainer = document.getElementById('text-container');
 
 function typeText() {
-    const speedForward = 100; // Typing speed
-    const speedBackward = 50; // Deleting speed
-    const pause = 2000; // Pause at the end of typing each stage
-
-    if (isDeleting) {
-        currentText = parts[currentPart].substring(0, currentText.length - 1);
+    if (!isDeleting) {
+        if (charIndex <= parts[currentPart].length) {
+            currentText = parts[currentPart].substring(0, charIndex + 1);
+            charIndex++;
+        }
+        if (charIndex > parts[currentPart].length) {
+            // If the end of the current part is reached, start deleting after a pause
+            setTimeout(() => {
+                isDeleting = true;
+            }, 2000); // Pause before starting to delete
+        }
     } else {
-        currentText = parts[currentPart].substring(0, currentText.length + 1);
+        if (charIndex > 0) {
+            currentText = parts[currentPart].substring(0, charIndex - 1);
+            charIndex--;
+        }
+        if (charIndex === 0) {
+            // If all characters are deleted, move to the next part or restart
+            isDeleting = false;
+            currentPart = (currentPart + 1) % parts.length;
+        }
     }
 
     textContainer.innerHTML = staticText + currentText;
 
-    if (!isDeleting && currentText === parts[currentPart]) {
-        setTimeout(() => { isDeleting = true; }, pause);
-    } else if (isDeleting && currentText === '') {
-        isDeleting = false;
-        currentPart = (currentPart + 1) % parts.length;
-    }
-
-    let timeout = isDeleting ? speedBackward : speedForward;
-    setTimeout(typeText, timeout);
+    // Set timeout for next execution
+    setTimeout(typeText, isDeleting ? 50 : 100);
 }
 
 document.addEventListener("DOMContentLoaded", typeText);
