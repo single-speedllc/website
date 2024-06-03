@@ -15,20 +15,20 @@ html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #333;
-    border-right: 1.25px solid black;
-    padding: 5px;
     white-space: nowrap;
     overflow: hidden;
     margin: 0;
-    display: inline; /* Ensure the container is inline for the cursor to be right next to the text */
+    display: inline-block;
+}
+
+#cursor {
+    display: inline;
+    border-right: 1.25px solid black;
+    animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
     50% {
         border-color: transparent;
     }
-}
-
-#text-container {
-    animation: blink 1s step-end infinite;
 }
