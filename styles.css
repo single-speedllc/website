@@ -4,22 +4,23 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: transparent; /* Ensures the background is transparent */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevents scrolling */
+    background: transparent;
+    overflow: hidden;
 }
 
 #text-container {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; /* Adjusted font size */
+    font-size: 16px;
     color: #333;
-    border-right: 1.25px solid black; /* Adjust cursor thickness */
+    border-right: 1.25px solid black;
     padding: 5px;
     white-space: nowrap;
-    display: inline-block;
-    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    display: inline; /* Ensure the container is inline for the cursor to be right next to the text */
 }
 
 @keyframes blink {
