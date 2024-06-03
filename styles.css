@@ -13,12 +13,13 @@ html, body {
 
 #text-container {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 16px; /* Adjusted font size */
     color: #333;
-    border-right: 3px solid black;
+    border-right: 2px solid black; /* Adjust cursor thickness */
     padding: 5px;
     white-space: nowrap;
     display: inline-block;
+    box-sizing: border-box;
 }
 
 @keyframes blink {
