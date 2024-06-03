@@ -8,38 +8,27 @@ const parts = [
 const staticText = "Helping B2B SaaS startups scale through ";
 let currentPart = 0;
 let currentText = '';
-let charIndex = 0;
 let isDeleting = false;
 let textContainer = document.getElementById('text-container');
 
 function typeText() {
+    let speed = isDeleting ? 50 : 100;  // Speed of typing or deleting
+    textContainer.innerHTML = staticText + currentText;
+
     if (!isDeleting) {
-        if (charIndex <= parts[currentPart].length) {
-            currentText = parts[currentPart].substring(0, charIndex + 1);
-            charIndex++;
-        }
-        if (charIndex > parts[currentPart].length) {
-            // If the end of the current part is reached, start deleting after a pause
-            setTimeout(() => {
-                isDeleting = true;
-            }, 2000); // Pause before starting to delete
+        currentText = parts[currentPart].substring(0, currentText.length + 1);
+        if (currentText === parts[currentPart]) {
+            setTimeout(() => { isDeleting = true; }, 2000); // Pause before deleting
         }
     } else {
-        if (charIndex > 0) {
-            currentText = parts[currentPart].substring(0, charIndex - 1);
-            charIndex--;
-        }
-        if (charIndex === 0) {
-            // If all characters are deleted, move to the next part or restart
+        currentText = parts[currentPart].substring(0, currentText.length - 1);
+        if (currentText === '') {
             isDeleting = false;
-            currentPart = (currentPart + 1) % parts.length;
+            currentPart = (currentPart + 1) % parts.length; // Move to the next part
         }
     }
 
-    textContainer.innerHTML = staticText + currentText;
-
-    // Set timeout for next execution
-    setTimeout(typeText, isDeleting ? 50 : 100);
+    setTimeout(typeText, speed);
 }
 
 document.addEventListener("DOMContentLoaded", typeText);
