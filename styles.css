@@ -10,22 +10,19 @@ html, body {
     align-items: center;
     background: transparent;
     overflow: hidden;
-    font-size: 16px; /* Base font size */
 }
 
 #text-container {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem; /* Responsive font size based on root font-size */
+    font-size: 16px; /* Adjust based on preference */
     color: #333;
-    border-right: 2px solid black; /* Cursor thickness */
+    border-right: 2px solid black;
     padding: 0;
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    box-sizing: border-box;
-    width: auto; /* Auto width to adjust based on content size */
-    max-width: 90vw; /* Prevents overflow on small screens */
+    max-width: 90vw; /* Responsive width */
 }
 
 @keyframes blink {
@@ -36,15 +33,4 @@ html, body {
 
 #text-container {
     animation: blink 1s step-end infinite;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    html, body {
-        font-size: 14px; /* Smaller base font size for smaller devices */
-    }
-    #text-container {
-        font-size: 1.1rem; /* Slightly larger font to maintain readability */
-        max-width: 95vw; /* Increase max width for very small screens */
-    }
 }
