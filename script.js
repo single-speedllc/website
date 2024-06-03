@@ -27,13 +27,13 @@ function typeText() {
     let typingSpeed = isDeleting ? speedBackward : speedForward;
 
     if (!isDeleting && currentText === parts[currentPart]) {
-        // If full text of part is displayed
+        // Full text is displayed
         typingSpeed = pause;
         isDeleting = true;
     } else if (isDeleting && currentText === '') {
-        // If text is fully deleted
+        // Text is fully deleted
         isDeleting = false;
-        currentPart = (currentPart + 1) % parts.length; // Cycle through parts
+        currentPart = (currentPart + 1) % parts.length;
         if (currentPart === 0) {
             textContainer.innerHTML = staticText; // Reset to initial state every cycle
         }
