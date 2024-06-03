@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
-body {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent; /* Ensures the background is transparent */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  /* This makes the body fill the viewport height */
-    margin: 0;
-    background: #f4f4f4;  /* Optional: sets a background color */
+    overflow: hidden; /* Prevents scrolling */
 }
 
 #text-container {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;  /* Increased font size */
-    color: #333;  /* Text color */
-    border-right: 3px solid black;  /* Thicker cursor to match the increased font size */
+    font-size: 16px;
+    color: #333;
+    border-right: 3px solid black;
     padding: 5px;
-    margin: 0;
     white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;  /* Ensures the container size matches content */
+    display: inline-block;
 }
 
 @keyframes blink {
