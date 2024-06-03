@@ -18,6 +18,7 @@ html, body {
     border-right: 2px solid black;
     padding: 5px;
     white-space: nowrap;
+    overflow: hidden;
     margin: 0;
 }
 
