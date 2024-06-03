@@ -12,9 +12,9 @@ let isDeleting = false;
 let textContainer = document.getElementById('text-container');
 
 function typeText() {
-    const speedForward = 100; // typing speed
-    const speedBackward = 50; // deleting speed
-    const pause = 2000; // pause between parts
+    const speedForward = 100; // Speed of typing
+    const speedBackward = 50; // Speed of deleting
+    const pause = 2000; // Pause at the end of each cycle
 
     if (isDeleting) {
         currentText = parts[currentPart].substring(0, currentText.length - 1);
@@ -24,23 +24,17 @@ function typeText() {
 
     textContainer.innerHTML = staticText + currentText;
 
-    let typingSpeed = isDeleting ? speedBackward : speedForward;
-
     if (!isDeleting && currentText === parts[currentPart]) {
-        // Full text is displayed
-        typingSpeed = pause;
-        isDeleting = true;
+        setTimeout(() => { isDeleting = true; }, pause);
     } else if (isDeleting && currentText === '') {
-        // Text is fully deleted
         isDeleting = false;
         currentPart = (currentPart + 1) % parts.length;
         if (currentPart === 0) {
-            textContainer.innerHTML = staticText; // Reset to initial state every cycle
+            textContainer.innerHTML = staticText; // Reset to start text when all parts are done
         }
-        typingSpeed = 500; // Delay before starting next part
     }
 
-    setTimeout(typeText, typingSpeed);
+    setTimeout(typeText, isDeleting ? speedBackward : speedForward);
 }
 
 document.addEventListener("DOMContentLoaded", typeText);
