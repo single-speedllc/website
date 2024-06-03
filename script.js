@@ -27,7 +27,7 @@ function typeText() {
         }
     }
 
-    textContainer.innerHTML = staticText + currentText;
+    textContainer.innerHTML = staticText + currentText + '<span id="cursor"></span>';
     setTimeout(typeText, speed);
 }
 
