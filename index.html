@@ -4,101 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single Speed</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: transparent;
-            overflow: hidden;
-            font-size: 16px; /* Base font size */
-        }
-
-        #text-container {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem; /* Responsive font size based on root font-size */
-            color: #333;
-            border-right: 2px solid black; /* Cursor thickness */
-            padding: 0;
-            margin: 0;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            box-sizing: border-box;
-            max-width: 90vw; /* Prevents overflow on small screens */
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-
-        #text-container {
-            animation: blink 1s step-end infinite;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            html, body {
-                font-size: 14px; /* Smaller base font size for smaller devices */
-            }
-            #text-container {
-                font-size: 1.1rem; /* Slightly larger font to maintain readability */
-                max-width: 95vw; /* Increase max width for very small screens */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="text-container"></div>
-    <script>
-        const parts = [
-            "pre-revenue ($0-$1M ARR).",
-            "early revenue ($1M-$10M ARR).",
-            "growth ($10M-$30M ARR).",
-            "expansion ($30M-$100M ARR)."
-        ];
-
-        const staticText = "Helping B2B SaaS startups scale through ";
-        let currentPart = 0;
-        let currentText = '';
-        let isDeleting = false;
-        let textContainer = document.getElementById('text-container');
-
-        function typeText() {
-            const speedForward = 100; // Speed of typing
-            const speedBackward = 50; // Speed of deleting
-            const pause = 2000; // Pause at the end of each cycle
-
-            if (isDeleting) {
-                currentText = parts[currentPart].substring(0, currentText.length - 1);
-            } else {
-                currentText = parts[currentPart].substring(0, currentText.length + 1);
-            }
-
-            textContainer.innerHTML = staticText + currentText;
-
-            if (!isDeleting && currentText === parts[currentPart]) {
-                setTimeout(() => { isDeleting = true; }, pause);
-            } else if (isDeleting && currentText === '') {
-                isDeleting = false;
-                currentPart = (currentPart + 1) % parts.length;
-                if (currentPart === 0) {
-                    textContainer.innerHTML = staticText; // Reset to start text when all parts are done
-                }
-            }
-
-            setTimeout(typeText, isDeleting ? speedBackward : speedForward);
-        }
-
-        document.addEventListener("DOMContentLoaded", typeText);
-    </script>
+    <div id="static-text" style="display: none;">Helping founders scale ARR to $100M</div>
+    <script src="script.js"></script>
 </body>
 </html>
+
