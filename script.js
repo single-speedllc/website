@@ -13,7 +13,6 @@ let textContainer = document.getElementById('text-container');
 
 function typeText() {
     let speed = isDeleting ? 50 : 100;  // Speed of typing or deleting
-    textContainer.innerHTML = staticText + currentText;
 
     if (!isDeleting) {
         currentText = parts[currentPart].substring(0, currentText.length + 1);
@@ -28,6 +27,7 @@ function typeText() {
         }
     }
 
+    textContainer.innerHTML = staticText + currentText;
     setTimeout(typeText, speed);
 }
 
