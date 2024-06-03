@@ -12,9 +12,9 @@ let isDeleting = false;
 let textContainer = document.getElementById('text-container');
 
 function typeText() {
-    const speedForward = 100; // Speed of typing
-    const speedBackward = 50; // Speed of deleting
-    const pause = 2000; // Pause at the end of each cycle
+    const speedForward = 100; // Typing speed
+    const speedBackward = 50; // Deleting speed
+    const pause = 2000; // Pause at the end of typing each stage
 
     if (isDeleting) {
         currentText = parts[currentPart].substring(0, currentText.length - 1);
@@ -29,12 +29,10 @@ function typeText() {
     } else if (isDeleting && currentText === '') {
         isDeleting = false;
         currentPart = (currentPart + 1) % parts.length;
-        if (currentPart === 0) {
-            textContainer.innerHTML = staticText; // Reset to start text when all parts are done
-        }
     }
 
-    setTimeout(typeText, isDeleting ? speedBackward : speedForward);
+    let timeout = isDeleting ? speedBackward : speedForward;
+    setTimeout(typeText, timeout);
 }
 
 document.addEventListener("DOMContentLoaded", typeText);
