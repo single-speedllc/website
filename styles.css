@@ -1,0 +1,20 @@
+/* styles.css */
+#text-container {
+    font-size: 18px;
+    border-right: 2px solid black;
+    padding: 5px;
+    margin: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#text-container {
+    animation: blink 1s step-end infinite;
+}
