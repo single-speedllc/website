@@ -28,9 +28,10 @@ html, body {
 #cursor {
     display: inline-block;
     width: 2px;
-    height: 1em;
+    height: 1.2em; /* Adjust to match the text height */
     background-color: black;
     vertical-align: bottom;
+    animation: blink 1s step-end infinite;
     margin-left: -2px; /* To remove space between text and cursor */
 }
 
