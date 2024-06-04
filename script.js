@@ -1,42 +1,13 @@
-const parts = [
-    "pre-revenue ($0-$1M ARR).",
-    "early revenue ($1M-$10M ARR).",
-    "growth ($10M-$30M ARR).",
-    "expansion ($30M-$100M ARR)."
-];
-
-let currentPart = 0;
-let currentText = "";
-let charIndex = 0;
-let isDeleting = false;
-const dynamicText = document.getElementById('dynamic-text');
-const cursor = document.getElementById('cursor');
-
-function typeText() {
-    if (isDeleting) {
-        currentText = parts[currentPart].substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        currentText = parts[currentPart].substring(0, charIndex + 1);
-        charIndex++;
-    }
-
-    dynamicText.textContent = currentText;
-
-    if (!isDeleting && charIndex === parts[currentPart].length) {
-        cursor.style.animation = 'blink 1s step-end infinite';
+// script.js
+document.addEventListener('DOMContentLoaded', (event) => {
+    const bird = document.getElementById('bird');
+    
+    function flapWings() {
+        bird.style.animationPlayState = 'running';
         setTimeout(() => {
-            isDeleting = true;
-            cursor.style.animation = ''; // Solid cursor when deleting starts
-        }, 2000); // Pause before starting to delete
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        currentPart = (currentPart + 1) % parts.length;
-    } else {
-        cursor.style.animation = ''; // Solid cursor while typing or deleting
+            bird.style.animationPlayState = 'paused';
+        }, 1000); // Match the duration of the animation
     }
 
-    setTimeout(typeText, isDeleting ? 50 : 100);
-}
-
-document.addEventListener("DOMContentLoaded", typeText);
+    setInterval(flapWings, 5000 + Math.random() * 5000); // Flap wings every 5 to 10 seconds
+});
