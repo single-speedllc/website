@@ -11,6 +11,8 @@ let currentText = "";
 let charIndex = 0;
 let isDeleting = false;
 let textContainer = document.getElementById('text-container');
+let cursor = document.createElement('span');
+cursor.id = 'cursor';
 
 function typeText() {
     if (isDeleting) {
@@ -21,10 +23,15 @@ function typeText() {
         charIndex++;
     }
 
-    textContainer.innerHTML = staticText + currentText + '<span id="cursor"></span>';
+    textContainer.innerHTML = staticText + currentText;
+    textContainer.appendChild(cursor);
 
     if (!isDeleting && charIndex === parts[currentPart].length) {
-        setTimeout(() => isDeleting = true, 2000); // Pause before starting to delete
+        cursor.style.animation = 'blink 1s step-end infinite';
+        setTimeout(() => {
+            isDeleting = true;
+            cursor.style.animation = ''; // Stop blinking when deleting starts
+        }, 2000); // Pause before starting to delete
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         currentPart = (currentPart + 1) % parts.length;
