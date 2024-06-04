@@ -13,12 +13,8 @@ let isDeleting = false;
 let textContainer = document.getElementById('text-container');
 let cursor = document.createElement('span');
 cursor.id = 'cursor';
-cursor.innerText = '|';
-textContainer.appendChild(cursor);
 
 function typeText() {
-    cursor.style.animationPlayState = 'paused'; // Pause blinking while typing/deleting
-
     if (isDeleting) {
         currentText = parts[currentPart].substring(0, charIndex - 1);
         charIndex--;
@@ -28,13 +24,13 @@ function typeText() {
     }
 
     textContainer.innerHTML = staticText + currentText;
-    textContainer.appendChild(cursor); // Ensure cursor is always at the end
+    textContainer.appendChild(cursor);
 
     if (!isDeleting && charIndex === parts[currentPart].length) {
-        cursor.style.animationPlayState = 'running'; // Start blinking when idle
+        cursor.style.animation = 'blink 1s step-end infinite';
         setTimeout(() => {
             isDeleting = true;
-            cursor.style.animationPlayState = 'paused'; // Pause blinking before deleting
+            cursor.style.animation = '';
         }, 2000); // Pause before starting to delete
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
