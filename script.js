@@ -9,21 +9,24 @@ const staticText = "Helping B2B SaaS startups scale through ";
 let currentPart = 0;
 let currentText = '';
 let isDeleting = false;
-let textContainer = document.getElementById('text-container');
+let charIndex = 0;
+const textContainer = document.getElementById('text-container');
 
 function typeText() {
-    let speed = isDeleting ? 50 : 100;  // Speed of typing or deleting
+    let speed = isDeleting ? 50 : 100;
 
     if (!isDeleting) {
-        currentText = parts[currentPart].substring(0, currentText.length + 1);
-        if (currentText === parts[currentPart]) {
-            setTimeout(() => { isDeleting = true; }, 2000); // Pause before deleting
+        currentText = parts[currentPart].substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === parts[currentPart].length) {
+            setTimeout(() => { isDeleting = true; }, 2000);
         }
     } else {
-        currentText = parts[currentPart].substring(0, currentText.length - 1);
-        if (currentText === '') {
+        currentText = parts[currentPart].substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
             isDeleting = false;
-            currentPart = (currentPart + 1) % parts.length; // Move to the next part
+            currentPart = (currentPart + 1) % parts.length;
         }
     }
 
