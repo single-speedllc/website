@@ -22,7 +22,7 @@ html, body {
 
 #cursor {
     display: inline-block;
-    width: 1px;
+    width: 2px;
     background-color: black;
     animation: blink 1s step-end infinite;
 }
