@@ -34,7 +34,7 @@ html, body {
     width: 1px;
     height: 1em;
     background-color: black;
-    vertical-align: bottom;
+    vertical-align: center;
     position: relative;
     top: 0.1em; /* Adjust to match the text height */
     animation: blink 1s step-end infinite;
