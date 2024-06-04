@@ -21,18 +21,16 @@ html, body {
     overflow: hidden;
     text-align: center; /* Center text */
     width: 90%; /* Make the container responsive */
-    line-height: 1.2em; /* Set line height to prevent vertical shift */
-}
-
-#text {
-    display: inline;
+    line-height: 1.5em; /* Prevent line height from changing */
+    position: relative;
 }
 
 #cursor {
-    display: inline;
+    display: inline-block;
     width: 2px;
     background-color: black;
     animation: blink 1s step-end infinite;
+    vertical-align: bottom;
 }
 
 @keyframes blink {
