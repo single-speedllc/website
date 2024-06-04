@@ -9,8 +9,8 @@ let currentPart = 0;
 let currentText = "";
 let charIndex = 0;
 let isDeleting = false;
-let dynamicText = document.getElementById('dynamic-text');
-let cursor = document.getElementById('cursor');
+const dynamicText = document.getElementById('dynamic-text');
+const cursor = document.getElementById('cursor');
 
 function typeText() {
     if (isDeleting) {
@@ -27,13 +27,13 @@ function typeText() {
         cursor.style.animation = 'blink 1s step-end infinite';
         setTimeout(() => {
             isDeleting = true;
-            cursor.style.animation = ''; // Stop blinking when deleting starts
+            cursor.style.animation = ''; // Solid cursor when deleting starts
         }, 2000); // Pause before starting to delete
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         currentPart = (currentPart + 1) % parts.length;
     } else {
-        cursor.style.animation = ''; // Ensure solid cursor while typing or deleting
+        cursor.style.animation = ''; // Solid cursor while typing or deleting
     }
 
     setTimeout(typeText, isDeleting ? 50 : 100);
