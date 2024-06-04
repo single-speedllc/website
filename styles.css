@@ -20,21 +20,20 @@ html, body {
     word-wrap: break-word; /* Break long words */
     overflow: hidden;
     text-align: center; /* Center text */
-    width: 90%; /* Make the container responsive */
+    width: 90%;
     line-height: 1.5em; /* Prevent line height from changing */
     position: relative;
 }
 
 #cursor {
     display: inline-block;
-    width: 2px;
+    width: 1px;
+    height: 1em;
     background-color: black;
-    animation: blink 1s step-end infinite;
-    position: absolute; /* Position relative to the text container */
+    vertical-align: bottom;
 }
 
 @keyframes blink {
-    50% {
-        background-color: transparent;
-    }
+    0%, 100% { background-color: black; }
+    50% { background-color: transparent; }
 }
