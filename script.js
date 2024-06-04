@@ -11,8 +11,13 @@ let currentText = "";
 let charIndex = 0;
 let isDeleting = false;
 let textContainer = document.getElementById('text-container');
+let textElement = document.createElement('span');
+textElement.id = 'text';
 let cursor = document.createElement('span');
 cursor.id = 'cursor';
+cursor.textContent = '|';
+
+textContainer.appendChild(textElement);
 textContainer.appendChild(cursor);
 
 function typeText() {
@@ -37,8 +42,7 @@ function typeText() {
         }
     }
 
-    textContainer.innerHTML = staticText + currentText;
-    textContainer.appendChild(cursor); // Ensure cursor is always appended
+    textElement.innerHTML = staticText + currentText;
     setTimeout(typeText, isDeleting ? 50 : 100);
 }
 
