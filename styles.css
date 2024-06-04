@@ -16,23 +16,25 @@ html, body {
     font-size: 16px;
     color: #333;
     display: inline-block;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow: hidden;
     text-align: center;
-    width: 90%;
     line-height: 1.5em;
-    position: relative;
+}
+
+#static-text {
+    display: block;
+}
+
+#dynamic-text {
+    display: inline-block;
+    white-space: nowrap;
 }
 
 #cursor {
     display: inline-block;
-    width: 2px;
-    height: 1.2em; /* Adjust to match the text height */
+    width: 1px;
     background-color: black;
     vertical-align: bottom;
     animation: blink 1s step-end infinite;
-    margin-left: -2px; /* To remove space between text and cursor */
 }
 
 @keyframes blink {
