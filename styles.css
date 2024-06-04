@@ -29,8 +29,8 @@ html, body {
     display: inline-block;
     width: 2px;
     background-color: black;
-    animation: blink 1s step-end infinite;
-    vertical-align: bottom;
+    vertical-align: bottom; /* Ensure cursor is aligned with the text */
+    animation: blink 1s step-end infinite paused; /* Start paused */
 }
 
 @keyframes blink {
