@@ -32,9 +32,9 @@ html, body {
 #cursor {
     display: inline-block;
     width: 1px;
+    height: 1em;
     background-color: black;
     vertical-align: bottom;
-    animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
