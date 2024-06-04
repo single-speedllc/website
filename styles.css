@@ -31,12 +31,10 @@ html, body {
     height: 1em;
     background-color: black;
     vertical-align: bottom;
-    animation: blink 1s step-end infinite;
     margin-left: -2px; /* To remove space between text and cursor */
 }
 
 @keyframes blink {
-    50% {
-        background-color: transparent;
-    }
+    0%, 100% { background-color: black; }
+    50% { background-color: transparent; }
 }
