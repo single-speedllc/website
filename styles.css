@@ -1,46 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    overflow: hidden;
-}
-
-#text-container {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #333;
-    display: inline-block;
-    text-align: center;
-    line-height: 1.5em;
-}
-
-#static-text {
-    display: block;
-}
-
-#dynamic-text {
-    display: inline-block;
-    white-space: nowrap;
-}
-
-#cursor {
-    display: inline-block;
-    width: 1px;
-    height: 1em;
-    background-color: black;
-    vertical-align: center;
+/* styles.css */
+.image-container {
     position: relative;
-    top: 0.1em; /* Adjust to match the text height */
-    animation: blink 1s step-end infinite;
+    display: inline-block;
 }
 
-@keyframes blink {
-    0%, 100% { background-color: black; }
-    50% { background-color: transparent; }
+#veniceImage {
+    width: 100%;
+}
+
+.bird {
+    position: absolute;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    background: url('path/to/bird.png') no-repeat; /* Use an image of a bird with wings */
+    top: 20px; /* Adjust position as needed */
+    left: 50%; /* Adjust position as needed */
+    transform: translateX(-50%);
+    animation: flap 1s steps(2) infinite;
+    animation-play-state: paused;
+}
+
+@keyframes flap {
+    from { background-position: 0; }
+    to { background-position: -60px; } /* Adjust according to your bird sprite image */
 }
