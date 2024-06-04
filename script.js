@@ -10,16 +10,16 @@ let currentPart = 0;
 let currentText = '';
 let isDeleting = false;
 let charIndex = 0;
-const textContainer = document.getElementById('text-container');
+let textContainer = document.getElementById('text-container');
 
 function typeText() {
-    let speed = isDeleting ? 50 : 100;  // Speed of typing or deleting
+    let speed = isDeleting ? 50 : 100;
 
     if (!isDeleting) {
         currentText = parts[currentPart].substring(0, charIndex + 1);
         charIndex++;
         if (charIndex === parts[currentPart].length) {
-            setTimeout(() => { isDeleting = true; }, 2000); // Pause before deleting
+            setTimeout(() => { isDeleting = true; }, 2000);  // Pause before deleting
         }
     } else {
         currentText = parts[currentPart].substring(0, charIndex - 1);
@@ -27,7 +27,6 @@ function typeText() {
         if (charIndex === 0) {
             isDeleting = false;
             currentPart = (currentPart + 1) % parts.length;
-            setTimeout(() => { charIndex = 0; }, 500); // Small delay before typing next part
         }
     }
 
