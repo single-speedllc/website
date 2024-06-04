@@ -30,7 +30,7 @@ function typeText() {
         cursor.style.animation = 'blink 1s step-end infinite';
         setTimeout(() => {
             isDeleting = true;
-            cursor.style.animation = '';
+            cursor.style.animation = ''; // Stop blinking when deleting starts
         }, 2000); // Pause before starting to delete
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
