@@ -17,18 +17,18 @@ html, body {
     color: #333;
     white-space: nowrap;
     overflow: hidden;
-    margin: 0;
     display: inline-block;
 }
 
 #cursor {
-    display: inline;
-    border-right: 1.25px solid black;
+    display: inline-block;
+    width: 2px;
+    background-color: black;
     animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
     50% {
-        border-color: transparent;
+        background-color: transparent;
     }
 }
