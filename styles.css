@@ -34,7 +34,7 @@ html, body {
     width: 1px;
     height: 1em;
     background-color: black;
-    vertical-align: bottom;
+    vertical-align: center;
 }
 
 @keyframes blink {
