@@ -5,14 +5,12 @@ const parts = [
     "expansion ($30M-$100M ARR)."
 ];
 
-const staticText = "Helping B2B SaaS startups scale through ";
 let currentPart = 0;
 let currentText = "";
 let charIndex = 0;
 let isDeleting = false;
-let textContainer = document.getElementById('text-container');
-let cursor = document.createElement('span');
-cursor.id = 'cursor';
+let dynamicText = document.getElementById('dynamic-text');
+let cursor = document.getElementById('cursor');
 
 function typeText() {
     if (isDeleting) {
@@ -23,8 +21,7 @@ function typeText() {
         charIndex++;
     }
 
-    textContainer.innerHTML = staticText + currentText;
-    textContainer.appendChild(cursor);
+    dynamicText.textContent = currentText;
 
     if (!isDeleting && charIndex === parts[currentPart].length) {
         cursor.style.animation = 'blink 1s step-end infinite';
@@ -35,6 +32,8 @@ function typeText() {
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         currentPart = (currentPart + 1) % parts.length;
+    } else {
+        cursor.style.animation = ''; // Ensure solid cursor while typing or deleting
     }
 
     setTimeout(typeText, isDeleting ? 50 : 100);
