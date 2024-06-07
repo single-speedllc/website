@@ -40,3 +40,10 @@ function typeText() {
 }
 
 document.addEventListener("DOMContentLoaded", typeText);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const bird = document.getElementById('bird');
+    setInterval(() => {
+        bird.classList.toggle('flap');
+    }, 2000); // Adjust interval as needed
+});
