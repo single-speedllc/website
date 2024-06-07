@@ -44,13 +44,3 @@ html, body {
     0%, 100% { background-color: black; }
     50% { background-color: transparent; }
 }
-
-#bird {
-    width: 100px; /* Adjust size as needed */
-    animation: flap 5s infinite;
-}
-
-@keyframes flap {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
