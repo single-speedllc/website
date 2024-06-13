@@ -5,15 +5,18 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.new-front-page_brands-wrapper {
+    background-color: #333;
+    padding: 40px 20px; /* Added padding to control spacing */
+}
+
 .new-front-page_brands {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 40px;
-    background-color: #333;
-    color: white;
     max-width: 1200px; /* Ensures the content doesn't stretch beyond this width */
     margin: auto; /* Centers the content on the page */
+    color: white;
 }
 
 .new-front-page_brands_redtext {
@@ -25,12 +28,13 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 1.5em;
-    max-width: 100%; /* Ensures the red section doesn't extend beyond the container */
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
 }
 
 .new-front-page_brands_text {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .new-front-page_brands_header {
@@ -54,6 +58,7 @@ body {
 .new-front-page_brands_logos-row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows logos to wrap to the next line if needed */
     gap: 20px;
 }
 
@@ -61,3 +66,4 @@ body {
     max-height: 50px;
     object-fit: contain;
 }
+
