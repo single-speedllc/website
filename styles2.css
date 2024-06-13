@@ -8,8 +8,7 @@ body {
 .new-front-page_brands-wrapper {
     background-color: #333;
     padding-block: 4rem;
-    row-gap: 2rem;
-    padding: 0; /* Removed padding to ensure the background extends fully */
+    row-gap: 2rem; /* Removed padding to ensure the background extends fully */
 }
 
 .new-front-page_brands {
@@ -24,7 +23,6 @@ body {
 .new-front-page_brands_redtext {
     background-color: #12a473;
     padding: 1rem 2rem;
-    width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -39,7 +37,7 @@ body {
 }
 
 .new-front-page_brands_text {
-    padding: 16px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
