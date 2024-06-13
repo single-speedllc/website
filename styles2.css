@@ -25,6 +25,8 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 1.5em;
+    max-width: 100%; /* Ensures the red section doesn't extend beyond the container */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
 }
 
 .new-front-page_brands_text {
