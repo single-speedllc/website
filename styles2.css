@@ -33,7 +33,7 @@ body {
 }
 
 .new-front-page_brands_text {
-    padding: 20px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
