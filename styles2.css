@@ -7,7 +7,7 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding: 0 20px; /* Adjusted padding to be horizontal only */
+    padding: 0; /* Removed padding to ensure the background extends fully */
 }
 
 .new-front-page_brands {
@@ -64,7 +64,13 @@ body {
 }
 
 .new-front-page_brands_logos-row img {
-    max-height: 80px; /* Increased size for logos */
+    max-height: 100px; /* Increased size for logos */
     object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+    .new-front-page_brands-wrapper {
+        padding: 0 20px;
+    }
 }
 
