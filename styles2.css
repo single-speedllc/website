@@ -23,7 +23,8 @@ body {
 
 .new-front-page_brands_redtext {
     background-color: #12a473;
-    padding: 20px;
+    padding: 1rem 2rem;
+    width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -32,7 +33,7 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     margin-top: 0px;
-    margin-right: 20px;
+    margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px; /* Removes any margin around the element */
 }
@@ -53,6 +54,7 @@ body {
 .new-front-page_brands_body {
     font-family: Roboto, sans-serif;
     font-size: 12px;
+    padding: 1rem 2rem;
     color: #ddd;
 }
 
