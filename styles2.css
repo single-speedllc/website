@@ -7,7 +7,7 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding-block: 4rem;
+    padding-block: 2rem;
     row-gap: 2rem; /* Removed padding to ensure the background extends fully */
 }
 
@@ -52,7 +52,6 @@ body {
 .new-front-page_brands_body {
     font-family: Roboto, sans-serif;
     font-size: 12px;
-    padding: 1rem 2rem;
     color: #ddd;
 }
 
