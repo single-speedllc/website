@@ -14,6 +14,7 @@ body {
 .new-front-page_brands {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
     gap: 0px;
     max-width: 1200px; /* Ensures the content doesn't stretch beyond this width */
     margin: auto; /* Centers the content within the section */
