@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: right; /* Align text to the right */
-    font-size: 1em;
+    font-size: 16px;
     margin: 0; /* Removes any margin around the element */
 }
 
@@ -40,12 +40,12 @@ body {
 }
 
 .new-front-page_brands_header {
-    font-size: 2em;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 
 .new-front-page_brands_body {
-    font-size: 1.2em;
+    font-size: 24px;
     color: #ddd;
 }
 
