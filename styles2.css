@@ -1,0 +1,52 @@
+.new-front-page_brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    background-color: #333;
+    color: white;
+}
+
+.new-front-page_brands_redtext {
+    background-color: red;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.new-front-page_brands_text {
+    padding: 20px;
+}
+
+.new-front-page_brands_header {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.new-front-page_brands_body {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.new-front-page_brands_logos {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.new-front-page_brands_logos-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.new-front-page_brands_logos-row img {
+    max-height: 50px;
+    object-fit: contain;
+}
