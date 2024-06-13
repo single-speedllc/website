@@ -20,7 +20,7 @@ body {
 }
 
 .new-front-page_brands_redtext {
-    background-color: #12a473;
+    background-color: HEX #12a473;
     padding: 20px;
     color: white;
     display: flex;
