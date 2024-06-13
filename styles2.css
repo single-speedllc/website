@@ -6,7 +6,7 @@ body {
 }
 
 .new-front-page_brands-wrapper {
-    background-color: #333;
+    background-color: HEX #efefef;
     padding: 0; /* Removed padding to ensure the background extends fully */
 }
 
@@ -14,7 +14,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    max-width: 1200px; /* Ensures the content doesn't stretch beyond this width */
+    max-width: auto; /* Ensures the content doesn't stretch beyond this width */
     margin: auto; /* Centers the content within the section */
     color: white;
 }
