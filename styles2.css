@@ -29,7 +29,10 @@ body {
     text-align: right; /* Align text to the right */
     font-family: Roboto, sans-serif;
     font-size: 16px;
-    margin: 0; /* Removes any margin around the element */
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px; /* Removes any margin around the element */
 }
 
 .new-front-page_brands_text {
