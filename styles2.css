@@ -7,7 +7,7 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding: 40px 20px; /* Added padding to control spacing */
+    padding: 40px 0; /* Adjusted padding to be vertical only */
 }
 
 .new-front-page_brands {
@@ -15,7 +15,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 1200px; /* Ensures the content doesn't stretch beyond this width */
-    margin: auto; /* Centers the content on the page */
+    margin: auto; /* Centers the content within the section */
     color: white;
 }
 
@@ -66,4 +66,3 @@ body {
     max-height: 50px;
     object-fit: contain;
 }
-
