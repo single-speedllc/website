@@ -65,6 +65,7 @@ body {
 
 .new-front-page_brands_logos-row img {
     max-height: 100px; /* Increased size for logos */
+    margin: 10px
     object-fit: contain;
 }
 
