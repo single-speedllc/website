@@ -70,7 +70,7 @@ body {
     object-fit: contain;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
     .new-front-page_brands-wrapper {
         padding: 0 20px;
     }
