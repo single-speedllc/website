@@ -35,7 +35,11 @@ body {
 }
 
 .new-front-page_brands_text {
-    padding: 1rem 2rem;
+    padding-top: 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
