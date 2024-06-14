@@ -26,6 +26,7 @@ body {
 .new-front-page_brands_text {
     flex: 1;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding-top: 20px;
     justify-content: right;
