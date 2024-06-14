@@ -4,6 +4,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    background-color: #fff;
+    color: #333;
 }
 
 *,
@@ -32,6 +34,8 @@ img {
     margin: 0 auto;
     max-width: 90%;
     text-align: left;
+    color: white;
+    font-size: 24px;
 }
 
 /* Brands Section */
@@ -40,6 +44,24 @@ img {
     color: white;
     padding: 2rem;
     text-align: center;
+}
+
+.brands-redtext {
+    background-color: #e74c3c;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+.brands h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.brands p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 16px;
+    color: #ddd;
 }
 
 .brands-logos {
@@ -165,4 +187,3 @@ img {
         padding: 0 20px;
     }
 }
-
