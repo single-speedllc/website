@@ -33,7 +33,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: normal;
     text-align: right;
     font-size: 16px;
     margin: 0;
@@ -48,7 +48,7 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: normal;
 }
 
 .new-front-page_brands_header {
