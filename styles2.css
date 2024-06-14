@@ -7,43 +7,37 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding-block: 2rem;
-    row-gap: 2rem; /* Removed padding to ensure the background extends fully */
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .new-front-page_brands {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
-    gap: 0px;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto; /* Centers the content within the section */
+    width: 100%;
+    max-width: 1200px;
+    gap: 0;
     color: white;
 }
 
 .new-front-page_brands_redtext {
     background-color: #12a473;
-    padding: 1rem 2rem;
+    padding: 2rem;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: right; /* Align text to the right */
-    font-family: Roboto, sans-serif;
+    text-align: right;
     font-size: 16px;
-    margin-top: 15px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px; /* Removes any margin around the element */
+    margin: 0;
+    width: 100%;
 }
 
 .new-front-page_brands_text {
-    padding-top: 15px;
-    padding-left: 33px;
-    padding-right: 30px;
-    padding-bottom: 20px;
+    padding: 2rem;
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -52,12 +46,10 @@ body {
 
 .new-front-page_brands_header {
     font-size: 24px;
-    font-family: Roboto, sans-serif;
     margin-bottom: 10px;
 }
 
 .new-front-page_brands_body {
-    font-family: Roboto, sans-serif;
     font-size: 12px;
     color: #ddd;
 }
@@ -67,35 +59,41 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    width: 100%;
+    padding-top: 20px;
 }
 
 .new-front-page_brands_logos-row {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allows logos to wrap to the next line if needed */
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
 }
 
 .new-front-page_brands_logos-row img {
-    max-height: 70px; /* Reduced size for logos */
+    max-height: 100px;
     margin: 10px;
 }
 
 @media (max-width: 768px) {
     .new-front-page_brands {
-        grid-template-columns: 1fr; /* Changes to single-column layout for smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .new-front-page_brands_redtext {
-        text-align: left; /* Align text to the left for better alignment on small screens */
-        margin-right: 20px; /* Adds margin to the right to prevent it from touching the edge */
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .new-front-page_brands_text {
+        padding: 1rem;
     }
 }
 
 @media (min-width: 1200px) {
     .new-front-page_brands-wrapper {
-        padding: 0 20px;
+        padding: 2rem 20px;
     }
 }
-
