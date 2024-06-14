@@ -78,7 +78,7 @@ body {
 }
 
 .new-front-page_brands_logos-row img {
-    max-height: 100px; /* Increased size for logos */
+    max-height: 70px; /* Reduced size for logos */
     margin: 10px;
 }
 
@@ -88,7 +88,7 @@ body {
     }
 
     .new-front-page_brands_redtext {
-        text-align: center; /* Center text for better alignment on small screens */
+        text-align: left; /* Align text to the left for better alignment on small screens */
     }
 }
 
