@@ -1,3 +1,5 @@
+/* styles2.css */
+
 body {
     margin: 0;
     padding: 0;
@@ -7,17 +9,11 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding-block: 2rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     row-gap: 2rem;
-}
-
-.new-front-page_brands {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
-    gap: 0px;
-    margin: auto;
-    color: white;
 }
 
 .new-front-page_brands_redtext {
@@ -28,37 +24,37 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    font-family: Roboto, sans-serif;
     font-size: 16px;
-    margin: 15px 0 0 0;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .new-front-page_brands_text {
-    padding: 15px 30px 20px 33px;
+    padding: 1rem;
     max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    color: white;
 }
 
 .new-front-page_brands_header {
     font-size: 24px;
-    font-family: Roboto, sans-serif;
     margin-bottom: 10px;
 }
 
 .new-front-page_brands_body {
-    font-family: Roboto, sans-serif;
     font-size: 12px;
     color: #ddd;
 }
 
 .new-front-page_brands_logos {
-    grid-column: span 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .new-front-page_brands_logos-row {
@@ -73,18 +69,20 @@ body {
     margin: 10px;
 }
 
-@media (max-width: 768px) {
-    .new-front-page_brands {
-        grid-template-columns: 1fr;
-    }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
 
+@media (max-width: 768px) {
     .new-front-page_brands_redtext {
         text-align: left;
         margin-right: 20px;
     }
 
-    .new-front-page_brands_redtext,
-    .new-front-page_brands_text {
-        grid-column: 1 / -1;
+    .new-front-page_brands-wrapper {
+        padding: 1rem 0.5rem;
     }
 }
