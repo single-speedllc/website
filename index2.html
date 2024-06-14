@@ -3,12 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles2.css">
-    <title>Single Speed, LLC</title>
+    <title>Single Speed</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+        .brands-section {
+            background-color: #333;
+            color: #fff;
+            padding: 4rem 2rem;
+            width: 100%;
+        }
+        .brands-section .highlight {
+            background-color: #12a473;
+            color: #fff;
+            padding: 1rem;
+            text-align: right;
+        }
+        .brands-section h1 {
+            margin: 2rem 0;
+            font-size: 2rem;
+        }
+        .brands-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .brands-logos img {
+            max-width: 100px;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .brands-section .highlight {
+                text-align: left;
+                padding: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section class="new-front-page_brands-wrapper">
-        <div class="new-front-page_brands">
+    <div class="container">
+        <div class="brands-section">
             <div class="new-front-page_brands_redtext">
                 <div>OVER FIFTEEN YEARS</div>
                 <div>OF SALES & MARKETING</div>
@@ -18,16 +65,14 @@
                 <h2 class="new-front-page_brands_header">BRANDS WE'VE WORKED WITH</h2>
                 <div class="new-front-page_brands_body">Custom-tailored performance solutions to help launch, scale, and invigorate businesses of all sizes and industries, including:</div>
             </div>
-            <div class="new-front-page_brands_logos">
-                <div class="new-front-page_brands_logos-row">
                     <img src="barclays2.png" alt="Brand 1">
                     <img src="chasec2.png" alt="Brand 2">
                     <img src="cushman2.png" alt="Brand 3">
                     <img src="scratch.png" alt="Brand 4">
-                    <img src="alibaba.png" alt="Brand 5">
-                </div>
+                <!-- Add more logos as needed -->
             </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
+
