@@ -16,10 +16,7 @@ body {
     grid-template-columns: 1fr 1fr;
     margin-top: 30px;
     gap: 0px;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
+    margin: auto;
     color: white;
 }
 
@@ -33,17 +30,11 @@ body {
     text-align: right;
     font-family: Roboto, sans-serif;
     font-size: 16px;
-    margin-top: 15px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin: 15px 0 0 0;
 }
 
 .new-front-page_brands_text {
-    padding-top: 15px;
-    padding-left: 33px;
-    padding-right: 30px;
-    padding-bottom: 20px;
+    padding: 15px 30px 20px 33px;
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -91,10 +82,9 @@ body {
         text-align: left;
         margin-right: 20px;
     }
-}
 
-@media (min-width: 1200px) {
-    .new-front-page_brands-wrapper {
-        padding: 0 20px;
+    .new-front-page_brands_redtext,
+    .new-front-page_brands_text {
+        grid-column: 1 / -1;
     }
 }
