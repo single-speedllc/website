@@ -5,6 +5,7 @@ body {
     font-family: Roboto, sans-serif;
     height: moz-max-content;
     height: webkit-max-content;
+    height: fit-content;
 }
 
 .new-front-page_brands-wrapper {
@@ -15,6 +16,7 @@ body {
     flex-direction: column;
     justify-content: top; /* vertically */
     height: webkit-max-content;
+    height: fit-content;
 }
 
 .new-front-page_brands {
@@ -42,7 +44,7 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
-
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
