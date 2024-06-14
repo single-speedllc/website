@@ -1,5 +1,3 @@
-/* styles2.css */
-
 body {
     margin: 0;
     padding: 0;
@@ -9,11 +7,14 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 2rem;
+    padding: 2rem;
+}
+
+.new-front-page_brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    color: white;
 }
 
 .new-front-page_brands_redtext {
@@ -25,18 +26,14 @@ body {
     justify-content: center;
     text-align: right;
     font-size: 16px;
-    max-width: 100%;
-    box-sizing: border-box;
+    margin: 0;
 }
 
 .new-front-page_brands_text {
-    padding: 1rem;
-    max-width: 500px;
+    padding: 15px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    color: white;
 }
 
 .new-front-page_brands_header {
@@ -50,11 +47,11 @@ body {
 }
 
 .new-front-page_brands_logos {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 100%;
 }
 
 .new-front-page_brands_logos-row {
@@ -69,20 +66,19 @@ body {
     margin: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
-
 @media (max-width: 768px) {
-    .new-front-page_brands_redtext {
-        text-align: left;
-        margin-right: 20px;
+    .new-front-page_brands {
+        grid-template-columns: 1fr;
     }
 
+    .new-front-page_brands_redtext {
+        text-align: left;
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (min-width: 1200px) {
     .new-front-page_brands-wrapper {
-        padding: 1rem 0.5rem;
+        padding: 0 20px;
     }
 }
