@@ -12,7 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content at the top */
-    overflow: hidden; /* Ensure no overflow */
 }
 
 .new-front-page_brands {
@@ -21,7 +20,6 @@ body {
     gap: 0;
     color: white;
     align-items: flex-start; /* Align items at the top */
-    flex: 1 1 auto; /* Ensure it takes available space */
 }
 
 .new-front-page_brands_redtext,
@@ -34,7 +32,7 @@ body {
 }
 
 .new-front-page_brands_redtext {
-    background-color: #12a473;
+    background-color: #127755;
     color: white;
     padding-top: 20px;
     text-align: right;
@@ -43,7 +41,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1 1 auto; /* Ensure it takes available space */
 }
 
 .new-front-page_brands_text {
@@ -52,7 +49,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1 1 auto; /* Ensure it takes available space */
 }
 
 .new-front-page_brands_header {
@@ -92,18 +88,15 @@ body {
 @media (max-width: 768px) {
     .new-front-page_brands {
         flex-direction: column;
-        flex: 1 1 auto; /* Ensure it takes available space */
     }
 
     .new-front-page_brands_redtext {
         text-align: left;
         margin: 0 0 20px 0;
-        flex: 1 1 auto; /* Ensure it takes available space */
     }
 
     .new-front-page_brands_text {
         margin-left: 0;
-        flex: 1 1 auto; /* Ensure it takes available space */
     }
 }
 
