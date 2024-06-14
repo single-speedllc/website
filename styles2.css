@@ -1,93 +1,101 @@
-/* Reset and Base Styles */
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    background-color: #fff;
-    color: #333;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Hero Section */
-.hero {
+.new-front-page_brands-wrapper {
     background-color: #333;
-    padding: 2rem;
-    text-align: center;
+    padding-block: 2rem;
+    row-gap: 2rem; /* Removed padding to ensure the background extends fully */
+}
+
+.new-front-page_brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    gap: 0px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto; /* Centers the content within the section */
     color: white;
 }
 
-.hero-text {
+.new-front-page_brands_redtext {
     background-color: #12a473;
-    display: inline-block;
     padding: 1rem 2rem;
-    margin: 0 auto;
-    max-width: 90%;
-    text-align: center;
     color: white;
-    font-size: 24px;
-}
-
-/* Brands Section */
-.brands {
-    background-color: #333;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-}
-
-.brands-redtext {
-    background-color: #e74c3c;
-    padding: 1rem 2rem;
-    margin: 0 auto 1rem;
-    max-width: 90%;
-    text-align: center;
-}
-
-.brands h2 {
-    font-size: 24px;
-    margin-bottom: 1rem;
-}
-
-.brands p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right; /* Align text to the right */
+    font-family: Roboto, sans-serif;
     font-size: 16px;
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px; /* Removes any margin around the element */
+}
+
+.new-front-page_brands_text {
+    padding-top: 15px;
+    padding-left: 33px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.new-front-page_brands_header {
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 10px;
+}
+
+.new-front-page_brands_body {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
     color: #ddd;
 }
 
-.brands-logos {
+.new-front-page_brands_logos {
+    grid-column: span 2;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-front-page_brands_logos-row {
+    display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 2rem 0;
+    flex-wrap: wrap; /* Allows logos to wrap to the next line if needed */
+    gap: 10px;
 }
 
-.brands-logos img {
-    max-width: 100px;
-    margin: 0.5rem;
+.new-front-page_brands_logos-row img {
+    max-height: 70px; /* Reduced size for logos */
+    margin: 10px;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
-    .hero-text {
-        text-align: left;
-        margin-right: 20px;
+    .new-front-page_brands {
+        grid-template-columns: 1fr; /* Changes to single-column layout for smaller screens */
     }
 
-    .brands-logos img {
-        max-width: 70px;
+    .new-front-page_brands_redtext {
+        text-align: left; /* Align text to the left for better alignment on small screens */
+        margin-right: 20px; /* Adds margin to the right to prevent it from touching the edge */
+    }
+}
+
+@media (min-width: 1200px) {
+    .new-front-page_brands-wrapper {
+        padding: 0 20px;
     }
 }
 
