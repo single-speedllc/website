@@ -2,47 +2,58 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; /* Light background for contrast */
 }
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding: 2rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Ensure full viewport height */
+    justify-content: center; /* Center the content vertically */
 }
 
 .new-front-page_brands {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1200px;
     gap: 0;
     color: white;
 }
 
 .new-front-page_brands_redtext {
     background-color: #12a473;
-    padding: 1rem 2rem;
+    padding: 2rem;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    font-size: 16px;
+    font-size: 1.5rem;
     margin: 0;
+    width: 100%;
 }
 
 .new-front-page_brands_text {
-    padding: 15px 30px;
+    padding: 2rem;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .new-front-page_brands_header {
-    font-size: 24px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .new-front-page_brands_body {
-    font-size: 12px;
+    font-size: 1rem;
     color: #ddd;
 }
 
@@ -51,19 +62,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    width: 100%;
+    padding-top: 20px;
 }
 
 .new-front-page_brands_logos-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    width: 100%;
 }
 
 .new-front-page_brands_logos-row img {
-    max-height: 70px;
+    max-height: 100px;
+    max-width: 200px;
     margin: 10px;
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
@@ -73,12 +89,16 @@ body {
 
     .new-front-page_brands_redtext {
         text-align: left;
-        margin: 0 0 20px 0;
+        padding: 1rem;
+    }
+
+    .new-front-page_brands_text {
+        padding: 1rem;
     }
 }
 
 @media (min-width: 1200px) {
     .new-front-page_brands-wrapper {
-        padding: 0 20px;
+        padding: 2rem 20px;
     }
 }
