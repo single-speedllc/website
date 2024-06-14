@@ -11,7 +11,7 @@ body {
     min-height: 100vh; /* Ensure the content fills the viewport */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the content */
+    justify-content: top; /* Vertically center the content */
 }
 
 .new-front-page_brands {
@@ -27,13 +27,13 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
     justify-content: right;
 }
 
 .new-front-page_brands_redtext {
     background-color: #12a473;
     padding: 1rem 2rem;
-    padding-top: 20px;
     color: white;
     text-align: right;
     font-size: 16px;
