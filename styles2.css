@@ -82,9 +82,18 @@ body {
     margin: 10px;
 }
 
+@media (max-width: 768px) {
+    .new-front-page_brands {
+        grid-template-columns: 1fr; /* Changes to single-column layout for smaller screens */
+    }
+
+    .new-front-page_brands_redtext {
+        text-align: center; /* Center text for better alignment on small screens */
+    }
+}
+
 @media (min-width: 1200px) {
     .new-front-page_brands-wrapper {
         padding: 0 20px;
     }
 }
-
