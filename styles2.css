@@ -19,7 +19,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 0;
     color: white;
-    align-items: center; /* Center items vertically within grid */
+    align-items: stretch; /* Ensure both columns are the same height */
 }
 
 .new-front-page_brands_redtext {
