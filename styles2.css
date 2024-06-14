@@ -89,6 +89,7 @@ body {
 
     .new-front-page_brands_redtext {
         text-align: left; /* Align text to the left for better alignment on small screens */
+        margin-right: 20px; /* Adds margin to the right to prevent it from touching the edge */
     }
 }
 
