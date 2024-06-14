@@ -11,7 +11,7 @@ body {
     min-height: 100vh; /* Ensure the content fills the viewport */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content vertically */
+    justify-content: top; /* vertically */
 }
 
 .new-front-page_brands {
