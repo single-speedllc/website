@@ -5,6 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles2.css">
     <title>Brands We Helped</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, sans-serif;
+        }
+
+        .new-front-page_brands-wrapper {
+            background-color: #333;
+            padding: 2rem 2rem 0 2rem; /* Adjusted padding for better top spacing */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align content at the top */
+        }
+
+        .new-front-page_brands {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0;
+            color: white;
+            align-items: flex-start; /* Align items at the top */
+        }
+
+        .new-front-page_brands_redtext,
+        .new-front-page_brands_text {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 1rem 2rem;
+        }
+
+        .new-front-page_brands_redtext {
+            background-color: #127755;
+            color: white;
+            padding-top: 20px;
+            text-align: right;
+            font-size: 16px;
+            font-family: Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .new-front-page_brands_text {
+            text-align: left;
+            margin-left: 20px; /* Add space between the two sections */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .new-front-page_brands_header {
+            font-size: 24px;
+            font-family: Roboto, sans-serif;
+            margin-bottom: 10px;
+            margin-top: 0px;
+        }
+
+        .new-front-page_brands_body {
+            font-size: 12px;
+            font-family: Roboto, sans-serif;
+            color: #ddd;
+        }
+
+        .new-front-page_brands_logos {
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px; /* Add some space above the logos */
+        }
+
+        .new-front-page_brands_logos-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .new-front-page_brands_logos-row img {
+            max-height: 70px;
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .new-front-page_brands {
+                flex-direction: column;
+            }
+
+            .new-front-page_brands_redtext {
+                text-align: left;
+                margin: 0 0 20px 0;
+            }
+
+            .new-front-page_brands_text {
+                margin-left: 0;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .new-front-page_brands-wrapper {
+                padding: 0 20px;
+            }
+        }
+
+        /* Additional styles to handle the alignment requirements */
+        @media (min-width: 769px) {
+            .new-front-page_brands {
+                justify-content: space-between;
+            }
+            .new-front-page_brands_redtext {
+                max-width: 45%; /* Adjust max-width as necessary */
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="new-front-page_brands-wrapper">
