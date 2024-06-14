@@ -3,104 +3,98 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+}
+
+.new-front-page_brands-wrapper {
     background-color: #333;
-    color: white;
+    padding-block: 2rem;
+    row-gap: 2rem;
 }
 
-.header {
-    padding: 2rem;
-    text-align: center;
-}
-
-.main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.hero {
-    background-color: #923233;
-    padding: 4rem;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-}
-
-.stats {
-    padding: 2rem;
-}
-
-.brands-wrapper {
-    background-color: #333;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.brands {
+.new-front-page_brands {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    width: 100%;
+    margin-top: 30px;
+    gap: 0px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    color: white;
 }
 
-.brands-redtext {
-    background-color: #923233;
-    padding: 2rem;
+.new-front-page_brands_redtext {
+    background-color: #12a473;
+    padding: 1rem 2rem;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
+    text-align: right;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 
-.brands-text {
-    padding: 2rem;
+.new-front-page_brands_text {
+    padding-top: 15px;
+    padding-left: 33px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.brands-header {
+.new-front-page_brands_header {
     font-size: 24px;
-    margin-bottom: 1rem;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 10px;
 }
 
-.brands-body {
-    font-size: 16px;
+.new-front-page_brands_body {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
     color: #ddd;
 }
 
-.brands-logos {
+.new-front-page_brands_logos {
     grid-column: span 2;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.brands-logos-row {
+.new-front-page_brands_logos-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 10px;
 }
 
-.brands-logos-row img {
+.new-front-page_brands_logos-row img {
     max-height: 70px;
-    margin: 1rem;
-    filter: grayscale(100%);
+    margin: 10px;
 }
 
 @media (max-width: 768px) {
-    .brands {
+    .new-front-page_brands {
         grid-template-columns: 1fr;
     }
 
-    .brands-redtext {
-        text-align: center;
+    .new-front-page_brands_redtext {
+        text-align: left;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .new-front-page_brands-wrapper {
+        padding: 0 20px;
     }
 }
