@@ -33,10 +33,10 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: normal;
+    justify-content: center;
     text-align: right;
     font-size: 16px;
-    margin: 0;
+    margin: auto;
 }
 
 .new-front-page_brands_text {
