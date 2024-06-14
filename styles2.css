@@ -48,7 +48,7 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: normal;
+    justify-content: center;
 }
 
 .new-front-page_brands_header {
