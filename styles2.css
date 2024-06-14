@@ -7,11 +7,11 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding: 2rem;
-    min-height: 100vh; /* Ensure the content fills the viewport */
+    padding: 1rem 2rem; /* Adjusted padding for better top spacing */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the content */
+    justify-content: flex-start; /* Align content at the top */
 }
 
 .new-front-page_brands {
@@ -19,7 +19,7 @@ body {
     flex-wrap: wrap;
     gap: 0;
     color: white;
-    align-items: center; /* Center items vertically */
+    align-items: flex-start; /* Align items at the top */
 }
 
 .new-front-page_brands_redtext,
@@ -27,24 +27,30 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 1rem 2rem;
 }
 
 .new-front-page_brands_redtext {
     background-color: #12a473;
+    padding: 1rem 2rem;
+    color: white;
     text-align: right;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .new-front-page_brands_text {
-    text-align: left;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .new-front-page_brands_header {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .new-front-page_brands_body {
@@ -89,4 +95,3 @@ body {
         padding: 0 20px;
     }
 }
-
