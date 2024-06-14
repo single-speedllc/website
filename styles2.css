@@ -7,7 +7,7 @@ body {
 
 .new-front-page_brands-wrapper {
     background-color: #333;
-    padding: 1rem 2rem; /* Adjusted padding for better top spacing */
+    padding: 2rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,8 +26,9 @@ body {
 .new-front-page_brands_text {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    padding-top: 20px;
 }
 
 .new-front-page_brands_redtext {
@@ -46,6 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 20px; /* Adjust this margin to align vertically */
 }
 
 .new-front-page_brands_header {
@@ -95,3 +97,4 @@ body {
         padding: 0 20px;
     }
 }
+
