@@ -98,6 +98,9 @@ body {
     .new-front-page_brands_text {
         margin-left: 10px;
     }
+    .new-front-page_brands_logos {
+        margin-top: 5px;
+    }
 }
 
 @media (min-width: 1200px) {
