@@ -19,7 +19,7 @@ body {
     flex-wrap: nowrap;
     gap: 0;
     color: white;
-    align-items: flex-start; /* Align items at the top */
+    align-items: normal; /* Align items at the top */
 }
 
 .new-front-page_brands_redtext,
