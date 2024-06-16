@@ -45,7 +45,7 @@ body {
 
 .new-front-page_brands_text {
     text-align: left;
-    margin-left: 20px; /* Add space between the two sections */
+    margin-left: 0px; /* Add space between the two sections */
     display: flex;
     flex-direction: column;
     justify-content: center;
